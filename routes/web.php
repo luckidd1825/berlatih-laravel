@@ -11,14 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+use App\Http\Controllers\Controller;
 
-Route::get('/', function () {
-    return view('register');
-});
+//route::get('/', function () {
+//   return view('welcome');
+//});
 
-Route::get('/', function () {
-    return view('welcome2');
-});
+route::get('/', 'HomeController@index');
+route::get('/register', 'AuthController@index');
+route::post('/welcome', 'AuthController@store');
